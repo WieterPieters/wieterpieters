@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WieterPieters.nl</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        /* Basis styling voor het hele document */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+
+        header p {
+            font-size: 1.2em;
+        }
+
+        nav {
+            background-color: #333;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2em;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #ff6600;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .post {
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            transition: transform 0.3s;
+        }
+
+        .post:hover {
+            transform: translateY(-5px);
+        }
+
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 0.9em;
+        }
+
+        footer p {
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>WieterPieters.nl</h1>
+        <p>Waar jouw gelul en dat van anderen samenkomt! </p>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="home.html">Homepagina</a></li>
+            <li><a href="channels.html">Kanalen</a></li>
+            <li><a href="new-post.html">Nieuwe zooipost</a></li>
+            <li><a href="login.html">Inloggen</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section>
+            <h2>Vers Gezeik</h2>
+            <div class="posts-grid" id="posts">
+                <!-- Posts worden hier geladen -->
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 WieterPieters.nl - Heb je nog vragen? Jammer.</p>
+    </footer>
+    <script src="app.js"></script>
+    <script>
+        loadPosts(); // Laad de posts van de backend of database
+    </script>
+</body>
+</html>
